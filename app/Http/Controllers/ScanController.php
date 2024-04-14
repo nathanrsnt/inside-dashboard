@@ -48,8 +48,8 @@ class ScanController extends Controller
             socket_close($socket);
 
             return $response;
-        } catch (\Exception e) {
-            return response()->json(['error', => $e], 500);
+        } catch (\Exception $e) {
+            return response()->json(['error' => $e], 500);
         }
     }
 
