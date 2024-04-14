@@ -24,6 +24,6 @@ Route::post('/run-nmap', [ScanController::class, 'runNmap'])->name('run.nmap');
 Route::get('/nmap', [ScanController::class, 'showNmap'])->name('nmap');
 
 //gobuster
-Route::get('/run-gobuster', [ScanController::class, 'runGobuster'])->name('run.gobuster');
-Route::get('/gobuster', [ScanController::class, 'showGobuster'])->name('gobuster');
+Route::post('/run-feroxbuster', [ScanController::class, 'runFeroxbuster'])->name('run.feroxbuster');
+Route::get('/feroxbuster', [ScanController::class, 'showFeroxbuster'])->name('feroxbuster');
 

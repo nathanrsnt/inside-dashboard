@@ -2,7 +2,7 @@
 
 @extends('layouts.app')
 
-@section('title', 'Nmap Scan')
+@section('title', 'Port Scan')
 
 @section('content')
     <!-- modals -->

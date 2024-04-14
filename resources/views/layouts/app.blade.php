@@ -25,21 +25,28 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarScroll">
                 <ul class="navbar-nav my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px; font-size: 17px">
-                    <li class="nav-item me-2"><a class="nav-link" href="{{route('pentesting')}}">Pentesting Analysis</a></li>
-                    <li class="nav-item me-2"><a class="nav-link" href="#">Malware Analysis</a></li>
-                    <li class="nav-item me-2">
-                    <a class="nav-link me-2" href="#" tabindex="-1" aria-disabled="true">My Stats</a>
-                    </li>
                     <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" 
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        More Tools
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                        <li><a class="dropdown-item" href="{{route('nmap')}}">Nmap</a></li>
-                        <li><a class="dropdown-item" href="{{route('gobuster')}}">Gobuster</a></li>
-                        <li><a class="dropdown-item" href="#">John The Ripper</a></li>
-                    </ul>
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" 
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Information Gathering
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                            <li><a class="dropdown-item" href="{{route('nmap')}}">Port Scan</a></li>
+                            <li><a class="dropdown-item" href="{{route('feroxbuster')}}">Forced Browsing</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item me-2"><a class="nav-link" href="{{route('pentesting')}}">Web Application Analysis</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" 
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Vulnerability Analysis
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                            <li><a class="dropdown-item" href="#">Password Brute-force</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item me-2">
+                    <a class="nav-link me-2" href="#" tabindex="-1" aria-disabled="true">Security Overview</a>
                     </li>
                 </ul>
                 </div>

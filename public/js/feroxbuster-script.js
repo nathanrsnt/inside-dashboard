@@ -1,6 +1,6 @@
 $(document).ready(function() {
   // Validation form
-  var form = document.getElementById('gobusterForm');
+  var form = document.getElementById('feroxbusterForm');
   var applyButton = document.getElementById('applyButton');
   var defaultChecked = "ipaddress";
 
@@ -15,12 +15,12 @@ $(document).ready(function() {
 
   // IP validation
   function isValidIP(ip) {
-    var ipRegex = /\b(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b(?:;|$)/;
+    var ipRegex = /\b(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b(?:;|)(:[0-9]{1,5})?$/;
     return ipRegex.test(ip);
   }
 
   function isValidDNS(dns) {
-    var dnsRegex = /^(?:(?:www\.)?[A-Za-z0-9-]+\.[A-Za-z]{2,3})(?:;(?:www\.)?[A-Za-z0-9-]+\.[A-Za-z]{2,3})*$/;
+    var dnsRegex = /^(?:(?:www\.)?[A-Za-z0-9-]+\.[A-Za-z]{2,3})(?:;(?:www\.)?[A-Za-z0-9-]+\.[A-Za-z]{2,3})*(:[0-9]{1,5})?$/;
     return dnsRegex.test(dns);
   }
 
@@ -58,7 +58,7 @@ $(document).ready(function() {
     } else {
         $.ajax({
             type: 'POST',
-            url: '/run-gobuster',
+            url: '/run-feroxbuster',
             data: formData,
             contentType: false,
             processData: false,

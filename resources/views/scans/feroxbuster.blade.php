@@ -1,7 +1,7 @@
-<!-- resources/views/scans/gobuster.blade.php -->
+<!-- resources/views/scans/feroxbuster.blade.php -->
 @extends('layouts.app')
 
-@section('title', 'Gobuster')
+@section('title', 'Forced Browsing')
 
 @section('content')
 
@@ -11,7 +11,6 @@
         <div class="modal-content">
             <h5 class="mt-2 ms-2" style="color: #3642B0;"> <i class="fa-solid fa-chevron-down"></i> Select your scan model</h5>
             <hr>
-
             <div class="container">
                 <div class="row mb-3">
                     <div class="col-md-3">
@@ -54,9 +53,9 @@
 </div>
 
 <div class="container col-lg-12 mt-5">
-        <h2 class="rg-font">Enter your IP, S3 Bucket, DNS or VHost: </h2>
+        <h2 class="rg-font">Enter your target URL: </h2>
         <!-- Formulário -->
-        <form id="gobusterForm">
+        <form id="feroxbusterForm">
             @csrf
             <div class="row col-lg-12">
                 <div class="form-group mb-3 col-lg-10">
@@ -64,7 +63,7 @@
                     <input type="text" class="form-control rounded-pill shadow fontAwesome search" 
                         id="ip" name="ip" placeholder="&#xF002;">
                     <input type="hidden" name="checkedValue" id="checkedValue" value="">
-                    <div class="invalid-feedback">Please, use a valid IP, S3 Bucket, DNS or VHost.</div>
+                    <div class="invalid-feedback">Please, use a valid URL.</div>
                 </div>
                 <div class="col-lg-2">
                     <button type="button" class="btn rounded-pill shadow btn-blue"
@@ -90,5 +89,5 @@
 @endsection
 
 @section('pagescript')
-    <script src="{{ asset('js/gobuster-script.js') }}"></script>
+    <script src="{{ asset('js/feroxbuster-script.js') }}"></script>
 @endsection
